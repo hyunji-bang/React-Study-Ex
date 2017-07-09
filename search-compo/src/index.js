@@ -8,10 +8,14 @@ class Search extends Component {
             searchTerm: "React"
         }
     }
+    handleChange(event){
+        this.setState({searchTerm: event.target.value});
+    }
     render() {
         return (
             <div>
-                Search Term: <input type="search" value={this.state.searchTerm}/>
+                Search Term: <input type="search" value={this.state.searchTerm}
+                                    onChange={this.handleChange.bind(this)}/>
             </div>
         );
     }
