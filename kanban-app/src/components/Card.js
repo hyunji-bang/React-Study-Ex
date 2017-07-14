@@ -15,6 +15,8 @@ class Card extends Component {
     }
 
     render() {
+        console.log('card props:', this.props);
+
         let cardDetails;
         if(this.state.showDetails){
             cardDetails = (

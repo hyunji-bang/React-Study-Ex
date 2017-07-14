@@ -3,18 +3,16 @@ import Card from './Card';
 
 class List extends Component {
     render() {
-        var cards = this.props.cards.map((card) => {
-            return <Card id={card.id}
-                         title={card.title}
-                         description={card.description}
-                         color={card.color}
-                         tasks={card.tasks}/>
-        });
+        console.log(this.props);
 
         return (
             <div className="list">
                 <h1>{this.props.title}</h1>
-                {cards}
+                <Card id={this.props.id}
+                      title={this.props.title}
+                      description={this.props.cards.description}
+                      color={this.props.cards.color}
+                      tasks={this.props.cards.tasks}/>
             </div>
         )
     }
